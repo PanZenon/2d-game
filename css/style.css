@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #303030;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+header {
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	text-shadow: 0 0 5px rgba(150, 150, 231, 1), 0 0 15px rgba(150, 150, 231, 1),
+		0 0 20px rgba(150, 150, 231, 1), 0 0 40px rgba(150, 150, 231, 1);
+	animation: 2s linear 0s infinite alternate shining;
+}
+@keyframes shining {
+	0% {
+		text-shadow: 0 0 5px rgba(150, 150, 231, 1), 0 0 15px rgba(150, 150, 231, 1),
+			0 0 20px rgba(150, 150, 231, 1), 0 0 40px rgba(150, 150, 231, 1);
+	}
+	100% {
+		text-shadow: none;
+	}
+}
+.menu {
+	display: block;
+	margin: 0 auto;
+	width: 500px;
+	height: 200px;
+	margin-top: 200px;
+	border: 1px solid white;
+	background-color: #313131;
+}
+.option {
+	width: 150px;
+	height: 25px;
+	padding-top: 5px;
+	background-color: #616161;
+	margin: 50px auto;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	color: rgb(235, 235, 235);
+	transition: 0.2s all ease-in-out;
+}
+.option:hover {
+	transform: scale(1.05);
+	background-color: #505050;
+	color: rgb(210, 210, 210);
+}
+.hangman {
+	display: block;
+	margin: 0 auto;
+	padding-left: 200px;
+}
