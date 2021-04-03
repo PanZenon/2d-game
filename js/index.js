@@ -1,13 +1,12 @@
-const socket = io("ws://localhost:3000");
-
-socket.on("connect", () => {
-    alert('hello')
-});
-
 window.onload = ()=>{
+    registerSwitch();
+    registerSettings();
+}
+function registerSettings(){
     document.querySelectorAll(".toggleSettings").forEach(addToggle)
     document.querySelectorAll(".toggleGame").forEach(addToggle)
 }
+
 
 function toggleSettings(){
     document.querySelector(".options").classList.toggle('disabled')

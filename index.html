@@ -6,25 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/switch.css">
 </head>
 <body>
+    <img class='hangman' src="img/wisielec.png" alt="">
     <header>Hangman</header>
     <container class="menu box">
         <div class="option toggleGame"><i class="fas fa-play"></i> Play</div>
         <div class="option toggleSettings"><i class="fas fa-cog"></i> Settings</div>
     </container>
     <container class="options box disabled">
-        <h2><i class="fas fa-cog"></i> Settings</h2>
+        <h3><i class="fas fa-cog"></i> Settings</h3>
+        <div class="switch">Music</div>
         <div class="option toggleSettings">Back</div>
     </container>
     <container class="game box disabled">
-       Game
-       <div class="option toggleGame">Back</div>
+        <h3><i class="fas fa-play"></i> Game</h3>
+        <div class="option toggleGame">Back</div>
     </container>
-    <img class='hangman' src="img/wisielec.png" alt="">
 
-    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/switch.js"></script>
     <script src="https://kit.fontawesome.com/293893692c.js" crossorigin="anonymous"></script>
 </body>
 </html>
