@@ -1,0 +1,25 @@
+{
+  "name": "2d-game",
+  "version": "1.0.0",
+  "description": "Iwan doesn't like bitter bar",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanZenon/2d-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PanZenon/2d-game/issues"
+  },
+  "homepage": "https://github.com/PanZenon/2d-game#readme",
+  "dependencies": {
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
