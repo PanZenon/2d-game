@@ -68,6 +68,15 @@ header {
 	text-align: center;
 	color: rgb(235, 235, 235);
 }
+.game {
+	width: 700px;
+	height: 300px;
+	padding-top: 25px;
+	margin-top: 175px;
+	border: 1px solid white;
+	text-align: center;
+	color: rgb(235, 235, 235);
+}
 .disabled {
 	display: none;
 }
