@@ -6,4 +6,7 @@
 body {
 	background-color: #1a1a1a;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+} 
+.light-theme {
+	background-color: #a0a0a0 !important;
 }

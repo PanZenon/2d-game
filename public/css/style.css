@@ -86,7 +86,7 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	transition: width .3s;
-	box-shadow: 10px 13px 75px -5px rgba(150, 150, 231, 1);
+	box-shadow: 10px 13px 153px 0px rgba(150, 150, 231, 1);
 }
 .option:hover::after {
 	width:100%;

@@ -21,7 +21,9 @@ function registerSwitch(){
         bgmusic.volume = 0.1;
         bgmusic.play()
     }
-
+    switches[1].onClick = function(){
+        document.body.classList.toggle("light-theme")
+    }
 }
 
 class Switch{
