@@ -1,0 +1,71 @@
+
+.about-header{
+    color:white;
+    font-size:48px;
+    font-weight:normal;
+}
+
+.authors-holder{
+    width:780px;
+    height:500px;
+    margin-top:75px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.authors-row{
+    width:100%;
+    height:325px;
+
+}
+
+.authors-col{
+    width:250px;
+    height:350px;
+    background-color:rgba(10,10,10,0.75);
+    color:rgb(255,255,255);
+    margin-left:15px;
+    float:left;
+    border-radius:10px;
+    text-align:center;
+    
+    transition-property:transform;
+    transition-duration:0.5s;
+    z-index:1;
+    border-bottom:30px solid rgba(10,10,10,1);
+}   .authors-col:first-child{margin-left:0;}
+    .authors-col:hover{transform:scale(1.05);z-index:2;}
+
+.author-avatar{
+    width:128px;
+    height:128px;
+    border-radius:50%;
+    border: 5px solid white;
+    margin-top:25px;
+}
+
+.author-name{
+    font-size:28px;
+
+}
+.author-description{
+    font-size:14px;
+    
+}
+
+
+.btn-back{
+    width: 150px;
+	height: 25px;
+	padding-top: 5px;
+	margin: 50px auto;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	transition: 0.1s;
+	transition-property: border-bottom;
+	border-bottom: 1px solid transparent;
+    margin-top:100px;
+}.btn-back:hover{border-bottom: 1px solid rgb(39, 158, 39) ;}

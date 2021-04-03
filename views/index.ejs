@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="hangman but in multiplayer!">
+    <meta name="keywords" content="hangman, multiplayer, 2d game, fun, gra, wieloosobowa, minigra, wisielec, game">
+    <meta name="author" content="xAxee#4835, owr#6062, Masło#2844">
+
+    <title><%= title %></title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    
+    <container class='loading-screen'>
+       <div class='dot'></div>
+       <div class='dot'></div>
+       <div class='dot'></div>
+       <div style="clear:both;"></div>
+    </container>
+    <img class='hangman' src="img/wisielec-test.gif" alt="">
+    <header>Hangman</header>
+    <container class="menu box">
+        <div class="option toggleGame"><i class="fas fa-play"></i> Play</div>
+        <div class="option toggleSettings"><i class="fas fa-cog"></i> Settings</div>
+        <div class="option toggleAbout"><i class="fas fa-user"></i> About</div>
+    </container>
+    <container class="options box disabled">
+        <h3><i class="fas fa-cog"></i> Settings</h3>
+        <div class="switch" id="music"><span>Music</span></div>
+        <div class="switch" id="darktheme"><span>Dark theme</span></div>
+        <div class="option toggleSettings">Back</div>
+    </container>
+    <container class="game box disabled">
+        <h3><i class="fas fa-play"></i> Game</h3>
+        <div class="option toggleGame">Back</div>
+    </container>
+    <container class='about box disabled'>
+        <center>
+            <h1 class='about-header'>About us</h1>
+        </center>
+    
+        <div class='authors-holder'>
+            <div class="authors-row">
+                <div class="authors-col">
+                    <img src='img/xaxee-avatar.png' class='author-avatar'>
+                <br/>
+                    <span class='author-name'>xAxee#4835</span>
+                <br/>
+                <br/>
+                    <span class='author-description'>
+                        I don't like gorzki chocolate bar.
+                    </span>
+                </div>
+                <div class="authors-col">
+                    <img src='img/owr-avatar.png' class='author-avatar'>
+                    <br/>
+                        <span class='author-name'>owr#6062</span>
+                    <br/>
+                    <br/>
+                        <span class='author-description'>
+                            siema
+                        </span>
+                </div>
+                <div class="authors-col">
+                    <img src='img/wojtas-avatar.png' class='author-avatar'>
+                    <br/>
+                        <span class='author-name'>Masło#2844</span>
+                    <br/>
+                    <br/>
+                        <span class='author-description'>
+                            no elo
+                        </span>
+                </div>
+            </div>
+            <br/>
+            <div class="btn-back toggleAbout"><i class="fas fa-backward"></i> Back</div>
+        </div>
+    </container>
+
+
+    <script src="js/index.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/cookie.js"></script>
+    
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class='footer-text_box'>
+
+        </div>
+    </footer>
+</body>
+</html>

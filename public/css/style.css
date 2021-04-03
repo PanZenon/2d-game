@@ -1,0 +1,121 @@
+header {
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	text-shadow: 0 0 5px rgba(150, 150, 231, 1), 0 0 15px rgba(150, 150, 231, 1),
+		0 0 20px rgba(150, 150, 231, 1), 0 0 40px rgba(150, 150, 231, 1);
+	animation: 2s linear 0s infinite alternate shining;
+}
+.loading-screen{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top:0;
+	left:0;
+	color:white;
+	text-align: center;
+	font-size: 2em;
+	background-color: #303030;
+}
+.dot{
+	width: 20px;
+	height: 20px;
+	border-radius:10px;
+	background:rgba(150, 150, 231, 1);
+	float:left;
+	margin:0 20px;
+	animation: pulsing 1s linear infinite alternate;
+	transition: .2s all ease-in-out;
+}
+.dot:nth-child(1){
+	animation-delay: .2s;
+}
+.dot:nth-child(2){
+	animation-delay: .5s;
+}
+.dot:nth-child(3){
+	animation-delay: .8s;
+}
+@keyframes pulsing{
+	0%{
+		transform: scale(1.0);
+	}
+	100%{
+		transform: scale(1.6);
+	}
+}
+@keyframes shining {
+	0% {
+		text-shadow: 0 0 5px rgba(150, 150, 231, 1), 0 0 15px rgba(150, 150, 231, 1),
+			0 0 20px rgba(150, 150, 231, 1), 0 0 40px rgba(150, 150, 231, 1);
+	}
+	100% {
+		text-shadow: none;
+	}
+}
+.box {
+	margin: 0 auto;
+	display: block;
+	transition: 0.2s all ease-in-out;
+	margin-top: 150px !important;
+}
+.menu {
+	width: 500px;
+	height: 200px;
+}
+.option {
+	width: 150px;
+	height: 25px;
+	padding-top: 5px;
+	margin: 50px auto;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+}
+.option::after{
+	content:"";
+	display:block;
+	width: 0px;
+	height: 2px;
+	background-color: rgba(150, 150, 231, 1);
+	margin-left: auto;
+	margin-right: auto;
+	transition: width .3s;
+	box-shadow: 10px 13px 75px -5px rgba(150, 150, 231, 1);
+}
+.option:hover::after {
+	width:100%;
+}
+.hangman {
+	position: absolute;
+	margin: 0 auto;
+	padding-left: 70%;
+	z-index: -1;
+
+}
+.options {
+	width: 700px;
+	height: 300px;
+	padding-top: 25px;
+	text-align: center;
+	color: rgb(235, 235, 235);
+}
+.game {
+	width: 700px;
+	height: 300px;
+	padding-top: 25px;
+	text-align: center;
+	color: rgb(235, 235, 235);
+}
+.disabled {
+	display: none;
+}
+.hidden{
+	visibility: hidden;
+	opacity:0;
+}

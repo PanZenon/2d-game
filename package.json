@@ -4,7 +4,8 @@
   "description": "Iwan doesn't like bitter bar",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon js/server.js"
+    "devStart": "nodemon js/server.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/PanZenon/2d-game#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "socket.io": "^4.0.1"
   },
   "devDependencies": {
