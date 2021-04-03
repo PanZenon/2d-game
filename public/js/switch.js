@@ -1,4 +1,5 @@
 let switches = [];
+
 function registerSwitch(){
     document.querySelectorAll(".switch").forEach(function(item){
         let s = new Switch(item, true);
@@ -14,6 +15,10 @@ function registerSwitch(){
         }
     })
     //Make the switches be functional
+
+    //0 == music
+    //1 == theme
+
     switches[0].onDisable = function(){
         bgmusic.pause();
     }
@@ -22,8 +27,7 @@ function registerSwitch(){
         bgmusic.play()
     }
     switches[1].onClick = function(){
-        document.body.classList.toggle("light-theme")
-    }
+        changeTheme();
 }
 
 class Switch{

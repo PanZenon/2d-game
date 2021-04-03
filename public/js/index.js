@@ -4,8 +4,8 @@ window.onload = ()=>{
     registerSwitch();
     registerSettings();
     registerCookies();
-    backgroundMusic();
     loadingScreen();
+    backgroundMusic();
 }
 function backgroundMusic(){
     if(getCookie("music")){
@@ -13,6 +13,9 @@ function backgroundMusic(){
             bgmusic.volume = 0.1;
             bgmusic.play();
         }, 1000)
+    }
+    if(!getCookie("changeTheme")){
+        changeTheme();
     }
 }
 
@@ -56,4 +59,20 @@ function addToggle(item){
 }
 function loadingScreen(){
     document.querySelector('.loading-screen').classList.add('hidden')
+}
+
+
+
+function changeTheme(){
+    let lightClasses = [{
+        normal: "options",
+        light: "options-light"
+    }]
+    document.body.classList.toggle("body-light")
+    lightClasses.forEach(e => {
+        document.querySelectorAll(e.normal).forEach(c => {
+            c.classList.toggle(e.ligth)
+        })
+    })
+}
 }

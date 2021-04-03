@@ -1,4 +1,6 @@
-.light-theme {
+.body-light {
 	background-color: #fff !important;
-    color: black!important;
+}
+.option-ligth {
+    color: black !important;
 }
