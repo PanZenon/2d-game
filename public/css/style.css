@@ -69,10 +69,10 @@ header {
 	height: 200px;
 }
 .option {
-	width: 150px;
+	width: 125px;
 	height: 25px;
-	padding-top: 5px;
-	margin: 50px auto;
+	padding-bottom: 5px;
+	margin: 25px auto;
 	text-align: center;
 	cursor: pointer;
 	color: white;
@@ -118,4 +118,11 @@ header {
 .hidden{
 	visibility: hidden;
 	opacity:0;
+}
+.settings{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.settings .switch{
+	margin-bottom: 20px;
 }

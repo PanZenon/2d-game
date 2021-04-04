@@ -1,8 +1,7 @@
 .switch{
-	margin: 5px;
 	width: 125px;
 	text-align: center;
-	margin: 50px auto;
+	margin: auto;
 	cursor: pointer;
 }
 .switch span{

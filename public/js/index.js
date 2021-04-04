@@ -38,6 +38,7 @@ function toggleGame(){
 function toggleAbout(){
     document.querySelector(".about").classList.toggle('disabled')
     document.querySelector(".menu").classList.toggle('disabled')
+    document.querySelector("#hangman").classList.toggle('disabled')
 }
 function addToggle(item){
     if(item.classList.contains("toggleGame")){

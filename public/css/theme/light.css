@@ -4,3 +4,13 @@ body.light-mode {
 body.light-mode *{
   color: black;
 }
+
+/*ABOUT*/
+
+body.light-mode .author-avatar{
+  border-color: black;
+}
+body.light-mode .authors-col{
+  background-color: rgba(49, 49, 49, 0.4);
+  border-color: rgb(100, 100, 100);
+}
