@@ -66,4 +66,10 @@ function loadingScreen(){
 
 function changeTheme(){
     document.body.classList.toggle("light-mode");
+    if (document.body.classList.contains("light-mode")){
+        document.querySelector(".hangman").src = "img/wisielec-light.gif"
+    } else {
+        document.querySelector(".hangman").src = "img/wisielec-dark.gif"
+    }
+    
 }
