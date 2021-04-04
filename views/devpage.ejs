@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="hangman but in multiplayer!">
+    <meta name="keywords" content="hangman, multiplayer, 2d game, fun, gra, wieloosobowa, minigra, wisielec, game">
+    <meta name="author" content="xAxee#4835, owr#6062, Masło#2844">
+
+    <title><%= title %></title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/theme/dark.css">
+    <link rel="stylesheet" href="css/theme/light.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+    <container>
+        <div class='game-box'>
+
+            <div class="chat-box">
+                <div class="chat-header">
+                    Hasło: <span class='game-pass'></span>
+                    <br/>
+                    Kategoria: <span class='game-category'></span>
+                </div>
+                <div class="chat-receive">
+                    
+                </div>
+                <textarea class="chat-send" onkeypress="isEnter(event)"></textarea>
+                <div class='send-button' onclick='nigga()'>
+                    WYŚLIJ
+                </div>
+            </div>
+        </div>
+    </container>
+
+    
+    <script src="js/switch.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/293893692c.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        function isEnter(event) {
+            if(event.keyCode == 13){
+                nigga();
+            }
+        }
+
+        function nigga(){
+            var msg = document.querySelector('.chat-send');
+            var msgContent = msg.value;
+            document.querySelector('.chat-receive').innerHTML += "<div class='message'>"+msgContent+"</div>"
+            msg.value = "";
+        }
+    </script>
+
+    <!-- accept cookies -->
+                                                                                                                                  
+</body>
+</html>

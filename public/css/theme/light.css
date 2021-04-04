@@ -1,8 +1,25 @@
 body.light-mode {
-  background-color: #bebebe;
+  background-color: #ebebeb;
 }
 body.light-mode *{
   color: black;
+}
+
+/* HANGMAN HEADER */
+body.light-mode header {
+  text-shadow: 0 0 5px rgb(125, 0, 0), 0 0 15px rgb(125, 0, 0),
+  0 0 20px rgb(125, 0, 0), 0 0 40px rgb(125, 0, 0);
+	animation: 2s linear 0s infinite alternate shiningLight;
+}
+
+@keyframes shiningLight {
+	0% {
+		text-shadow: 0 0 5px rgb(125, 0, 0), 0 0 15px rgb(125, 0, 0),
+			0 0 20px rgb(125, 0, 0), 0 0 40px rgb(125, 0, 0);
+	}
+	100% {
+		text-shadow: none;
+	}
 }
 
 /*ABOUT*/
@@ -12,5 +29,6 @@ body.light-mode .author-avatar{
 }
 body.light-mode .authors-col{
   background-color: rgba(49, 49, 49, 0.4);
-  border-color: rgb(100, 100, 100);
+  border-color: rgb(99, 99, 99);
 }
+

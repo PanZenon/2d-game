@@ -22,5 +22,5 @@ function getCookie(cname)
             return ret;
         }
     }
-    return "";
+    return true;
 }

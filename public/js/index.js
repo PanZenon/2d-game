@@ -5,22 +5,31 @@ window.onload = ()=>{
     registerSettings();
     registerCookies();
     loadingScreen();
-    backgroundMusic();
+    loadOptions();
 }
-function backgroundMusic(){
+
+
+
+
+function loadOptions(){
     if(getCookie("music")){
         setTimeout(function(){
             bgmusic.volume = 0.1;
             bgmusic.play();
         }, 1000)
     }
-    if(!getCookie("changeTheme")){
+    if(getCookie("changeTheme")){
         changeTheme()
     }
 }
 
+function changeTitle(title){
+    document.querySelector("title").innerTEXT = title.replace("{page}", title);
+}
 
 function registerSettings(){
+
+
     document.querySelectorAll(".toggleSettings").forEach(addToggle)
     document.querySelectorAll(".toggleGame").forEach(addToggle)
     document.querySelectorAll(".toggleAbout").forEach(addToggle)
@@ -30,15 +39,18 @@ function registerSettings(){
 function toggleSettings(){
     document.querySelector(".options").classList.toggle('disabled')
     document.querySelector(".menu").classList.toggle('disabled')
+    changeTitle("Settings")
 }
 function toggleGame(){
     document.querySelector(".game").classList.toggle('disabled')
     document.querySelector(".menu").classList.toggle('disabled')
+    changeTitle("Game")
 }
 function toggleAbout(){
     document.querySelector(".about").classList.toggle('disabled')
     document.querySelector(".menu").classList.toggle('disabled')
-    document.querySelector("#hangman").classList.toggle('disabled')
+    changeTitle("About")
+    //document.querySelector("#hangman").classList.toggle('disabled')
 }
 function addToggle(item){
     if(item.classList.contains("toggleGame")){
@@ -61,9 +73,6 @@ function addToggle(item){
 function loadingScreen(){
     document.querySelector('.loading-screen').classList.add('hidden')
 }
-
-
-
 function changeTheme(){
     document.body.classList.toggle("light-mode");
     if (document.body.classList.contains("light-mode")){
@@ -71,5 +80,21 @@ function changeTheme(){
     } else {
         document.querySelector(".hangman").src = "img/wisielec-dark.gif"
     }
-    
+}
+
+
+class Page{
+    constructor(item){
+        this.item = item;
+    }
+    register(){
+        this.item.onclick = function() {
+            this.toggle();
+            new Audio('sound/switch.mp3').play();
+        }
+    }
+    toggle(){
+        this.item.classList.toggle('disabled')
+        document.querySelector(".menu").classList.toggle('disabled')
+    }
 }
