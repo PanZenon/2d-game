@@ -51,21 +51,5 @@
 
 }
 .author-description{
-    font-size:14px;
-    
+    font-size:14px;   
 }
-
-
-.btn-back{
-    width: 150px;
-	height: 25px;
-	padding-top: 5px;
-	margin: 50px auto;
-	text-align: center;
-	cursor: pointer;
-	color: white;
-	transition: 0.1s;
-	transition-property: border-bottom;
-	border-bottom: 1px solid transparent;
-    margin-top:100px;
-}.btn-back:hover{border-bottom: 1px solid rgb(39, 158, 39) ;}

@@ -28,6 +28,7 @@ function registerSwitch(){
     }
     switches[1].onClick = function(){
         changeTheme();
+    }
 }
 
 class Switch{

@@ -11,8 +11,9 @@
     <title><%= title %></title>
 
     <!-- css -->
+    <link rel="stylesheet" href="css/theme/dark.css">
+    <link rel="stylesheet" href="css/theme/light.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/light.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/about.css">
@@ -34,8 +35,8 @@
     </container>
     <container class="options box disabled">
         <h3><i class="fas fa-cog"></i> Settings</h3>
-        <div class="switch" id="music"><span><i class="fas fa-music"></i> Toggle music</span></div>
-        <div class="switch" id="changeTheme"><span class='changeTheme'><i class="fas fa-adjust"></i> Change theme</span></div>
+        <div class="switch" id="music"><span><i class="fas fa-music"></i> Music</span></div>
+        <div class="switch" id="changeTheme"><span class='changeTheme'><i class="fas fa-adjust"></i> Dark theme</span></div>
         <div class="option toggleSettings">Back</div>
     </container>
     <container class="game box disabled">
@@ -81,14 +82,15 @@
                 </div>
             </div>
             <br/>
-            <div class="btn-back toggleAbout"><i class="fas fa-backward"></i> Back</div>
+            <div class="option toggleAbout">Back</div>
         </div>
     </container>
 
 
-    <script src="js/index.js"></script>
+    
     <script src="js/switch.js"></script>
     <script src="js/cookie.js"></script>
+    <script src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/293893692c.js" crossorigin="anonymous"></script>
 
 

@@ -15,7 +15,7 @@ function backgroundMusic(){
         }, 1000)
     }
     if(!getCookie("changeTheme")){
-        changeTheme();
+        changeTheme()
     }
 }
 
@@ -64,15 +64,5 @@ function loadingScreen(){
 
 
 function changeTheme(){
-    let lightClasses = [{
-        normal: "options",
-        light: "options-light"
-    }]
-    document.body.classList.toggle("body-light")
-    lightClasses.forEach(e => {
-        document.querySelectorAll(e.normal).forEach(c => {
-            c.classList.toggle(e.ligth)
-        })
-    })
-}
+    document.body.classList.toggle("light-mode");
 }

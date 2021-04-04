@@ -1,0 +1,6 @@
+body.light-mode {
+  background-color: #bebebe;
+}
+body.light-mode *{
+  color: black;
+}
