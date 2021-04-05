@@ -79,13 +79,6 @@
 	background-color: #303030;
 	transition: 0.4s all ease;
 }
-.category .switch {
-	margin: 15px 10px;
-	border-bottom: 1px solid rgb(158, 47, 39);
-}
-.category .switch-disable {
-	border-bottom: 1px solid rgb(39, 158, 39);
-}
 .category h1 {
 	display: block;
 	color: white;

@@ -1,38 +1,74 @@
 let switches = [];
-
+let music;
+let dark;
+let category;
 function registerSwitch(){
-    document.querySelectorAll(".switch").forEach(function(item){
-        let s = new Switch(item, true);
-        if(item.onclick != null){
-            s.onClick = item.onclick;
-        }
-        switches.push(s);
-    })
+    music = new Switch(document.querySelectorAll(".switch")[0], true)
+    dark = new Switch(document.querySelectorAll(".switch")[1], true)
+
     switches.forEach(function(item){
         item.item.onclick = function(){
             item.onClick();
             item.toggle();
         }
     })
-    //Make the switches be functional
 
-    //0 == music
-    //1 == theme
+    let categoryList = [];
+    document.querySelectorAll(".switch").forEach(e => {
+        if(e.id == "category"){
+            let s = new Switch(e, false);
 
-    switches[0].onDisable = function(){
+            categoryList.push(s)
+        }
+    })
+    category = new multiSwitch(categoryList);
+    category.register();
+
+    categoryList.forEach(e => {
+
+    })
+
+
+    music.onDisable = function(){
         bgmusic.pause();
     }
-    switches[0].onEnable = function(){
+    music.onEnable = function(){
         bgmusic.volume = 0.1;
         bgmusic.play()
     }
-    switches[1].onClick = function(){
+    dark.onClick = function(){
         changeTheme();
     }
 }
+class multiSwitch{
+    constructor(items){
+        this.items = items;
+    }
 
+    register(){
+        this.items.forEach(e => {
+            e.disable()
+            e.item.onclick = function(){
+                e.onClick();
+                e.toggle();
+            }
+            let x = this.items
+            e.onClick = function(){
+                x.forEach(s => {
+                    if(e != s){
+                        s.disable();
+                    }
+                })
+            }
+        })
+    }
+    getItems(){
+        return this.items;
+    }
+}
 class Switch{
     constructor(item, toCookies=false){
+        switches.push(this);
         this.item = item;
         if(item.id != null && item.id != ""){
             this.id = item.id;
