@@ -6,6 +6,7 @@ window.onload = ()=>{
     registerCookies();
     loadingScreen();
     loadOptions();
+    toggleCategory()
 }
 
 
@@ -82,6 +83,11 @@ function changeTheme(){
     }
 }
 
+function toggleCategory(){
+    document.querySelector('.fa-times').addEventListener('click',()=>{
+        document.querySelector('.category').classList.add('hidden')
+    })
+}
 
 class Page{
     constructor(item){

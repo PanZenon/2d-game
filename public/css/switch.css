@@ -1,12 +1,13 @@
-.switch{
+.switch {
 	width: 125px;
 	text-align: center;
 	margin: auto;
 	cursor: pointer;
 }
-.switch span{
+.switch {
 	border-bottom: 1px solid rgb(39, 158, 39);
+	transition: 0.2s all ease-in-out;
 }
-.switch-disable span{
+.switch-disable {
 	border-bottom: 1px solid rgb(158, 47, 39);
 }
