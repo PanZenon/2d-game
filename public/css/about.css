@@ -53,3 +53,10 @@
 .author-description{
     font-size:14px;   
 }
+.fa-book{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+    font-size: 3em;
+    color:white;
+}

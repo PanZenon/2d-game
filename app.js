@@ -5,7 +5,7 @@ const socket = require("socket.io");
 const app = express()
 const port = 3000;
 
-const ver = "inDev-1.2"
+const ver = "inDev-1.4"
 const authors = "xAxee, owr, Wojtas"
 
 // web settings

@@ -8,6 +8,7 @@ header {
 		0 0 20px rgba(150, 150, 231, 1), 0 0 40px rgba(150, 150, 231, 1);
 	animation: 2s linear 0s infinite alternate shining;
 }
+header:hover{cursor:pointer;}
 .loading-screen{
 	display:flex;
 	justify-content: center;
@@ -125,4 +126,31 @@ header {
 }
 .settings .switch{
 	margin-bottom: 20px;
+}
+
+.label-nick{
+	font-size:24px;
+	color:white;
+}
+
+.input-nick{
+	width:200px;
+	padding: 2px 0px;
+	background-color:transparent;
+	border:none;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	text-align:center;
+	color:#fff;
+	transition-property:border-color,width;
+	transition-duration:0.5s;
+}
+.input-nick:focus{
+	width:250px;
+	border-color:rgba(255,255,255,1);
+	outline:none;
+}
+.fa-book{
+	position:absolute;
+	left:0;
+	bottom:0;
 }

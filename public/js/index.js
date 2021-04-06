@@ -6,7 +6,7 @@ window.onload = ()=>{
     registerCookies();
     loadingScreen();
     loadOptions();
-    toggleCategory()
+    toggleCategory(document.querySelector(''))
 }
 
 
@@ -33,6 +33,8 @@ function registerSettings(){
 
     document.querySelectorAll(".toggleSettings").forEach(addToggle)
     document.querySelectorAll(".toggleGame").forEach(addToggle)
+    document.querySelectorAll(".toggleCreateGame").forEach(addToggle)
+    document.querySelectorAll(".toggleJoinGame").forEach(addToggle)
     document.querySelectorAll(".toggleAbout").forEach(addToggle)
 }
 
@@ -46,6 +48,11 @@ function toggleGame(){
     document.querySelector(".game").classList.toggle('disabled')
     document.querySelector(".menu").classList.toggle('disabled')
     changeTitle("Game")
+}
+function toggleCreateGame(){
+    document.querySelector(".newgame").classList.toggle('disabled')
+    document.querySelector(".menu").classList.toggle('disabled')
+    changeTitle("New game")
 }
 function toggleAbout(){
     document.querySelector(".about").classList.toggle('disabled')
@@ -83,9 +90,9 @@ function changeTheme(){
     }
 }
 
-function toggleCategory(){
+function toggleCategory(path){
     document.querySelector('.fa-times').addEventListener('click',()=>{
-        document.querySelector('.category').classList.add('hidden')
+        document.querySelector(path).classList.add('hidden')
     })
 }
 

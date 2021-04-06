@@ -28,12 +28,25 @@
        <div style="clear:both;"></div>
     </container>
     <img class='hangman' src="img/wisielec-dark.gif" alt="">
-    <header id="hangman">Hangman</header>
-    <container class="menu box">
+    <header id="hangman" onclick="window.location.href = '/'">Hangman</header>
+    <container class="menu box" style='text-align:Center;'>
+        <label for='setUsername' class='label-nick'>Your username:</label>
+        <br/><br/>
+        <input type="text" id="setUsername" class='input-nick' maxlength="25" placeholder="type your nick here" value="Player"/>
+        <br/><br/>
         <div class="main-option option toggleGame"><i class="fas fa-play"></i> Play</div>
         <div class="main-option option toggleSettings"><i class="fas fa-cog"></i> Settings</div>
         <div class="main-option option toggleAbout"><i class="fas fa-user"></i> About</div>
     </container>
+
+    <container class='newgame box disabled'>
+        <center>
+            <h1 class='about-header'>Lobby</h1>
+        </center>
+        <div class="main-option option toggleCreateGame"><i class="fas fa-plus"></i> New</div>
+        <div class="main-option option toggleJoinGame"><i class="fas fa-sign-in-alt"></i> Join</div>
+    </container>
+
     <container class="options box disabled">
         <h3><i class="fas fa-cog"></i> Settings</h3>
         <div class="settings">
@@ -46,13 +59,14 @@
         <container class="category"> 
             <h1>Category <i class="fas fa-times"></i></h1> 
             <img src="img/choose-image.png" alt=""> 
-            <div class="switch" id="category"><i class="fas fa-utensils"></i> Food</div>
-            <div class="switch" id="category"><i class="fas fa-paw"></i> Animals</div>
-            <div class="switch" id="category"><i class="fas fa-tools"></i> Tools</div>
-            <div class="switch" id="category"><i class="fas fa-user-friends"></i> Characters</div>
-            <div class="switch" id="category"><i class="fas fa-video"></i> Films</div>
-            <div class="switch" id="category"><i class="fas fa-seedling"></i> Plants</div>
+            <div class="switch category" id="Food"><i class="fas fa-utensils"></i> Food</div>
+            <div class="switch category" id="Animals"><i class="fas fa-paw"></i> Animals</div>
+            <div class="switch category" id="Tools"><i class="fas fa-tools"></i> Tools</div>
+            <div class="switch category" id="Characters"><i class="fas fa-user-friends"></i> Characters</div>
+            <div class="switch category" id="Films"><i class="fas fa-video"></i> Films</div>
+            <div class="switch category" id="Plant"><i class="fas fa-seedling"></i> Plants</div>
         </container>
+        <i class="fas fa-book"></i>
         <h3><i class="fas fa-play"></i> Game over</h3>
         <div class="option toggleGame">Back</div>
     </container>
