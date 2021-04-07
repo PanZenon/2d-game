@@ -15,11 +15,26 @@ Game is available **[here](https://panzenon.github.io/2d-game/)**.
 
 # Manual
 
-### Create lobby
+### Singleplayer
+
+Game where BOT randomize words from choosen categories which one player have to guess by choosing letters.
+
+In this game mode are availables most of settings.
+
+### Multiplayer
+
+Game where players can't add AI as a player, but they can randomize words from choosen categories or set their own one with their own category.
+
+In one room can be up to 12 players.
+
+All of the settings are available.
+
+### Lobbys // rooms
 
 Player can create lobby open to everyone, or set the password up to 30 characters.
-When player create lobby, admin have to set categories for whole game.
-After choosing categories, player can set new settings for game,
+When player create lobby, he have to set categories for whole game.
+
+After choosing categories, player can set new settings for game:
 
 - game fully randomized (players can't set their own password)
 - game depends on players (players can't randomize password)
@@ -27,9 +42,15 @@ After choosing categories, player can set new settings for game,
 - round time (from 5 minutes up to 15 minutes).
 - time to respond (from 5 seconds up to 30 seconds / player).
 
-### Find lobby
-
 Player can find open lobby, or join to existing one by code. Lobby with passwords is marked by padlock.
+
+### Settings
+
+Player can toggle music, change volume, toggle SFX (Sound Effects) or even toggle theme from dark to light.
+
+### About
+
+In About page are authors who made something in our **Handman**
 
 # Screenshots
 
@@ -71,6 +92,7 @@ Player can find open lobby, or join to existing one by code. Lobby with password
 - [+] made settings to work (toggling theme and music),
 - [+] clicking sounds and background music,
 - [+] handman image for light and dark theme,
+- [+] cookies
 - [/] about and settings desing.
 ```
 
@@ -80,9 +102,27 @@ Player can find open lobby, or join to existing one by code. Lobby with password
     <summary>v1.3</summary>
 
 ```
-- [+] category menu,
-- [+]
+- [+] categories menu,
+- [+] multiswitches
 - [/] light theme design
 ```
 
 </details>
+
+<details>
+    <summary>v1.4</summary>
+
+```
+- [+] simple menu after play-button
+- [+] back to main menu on header click
+- [+] more categories to choose
+- [+] Singleplayer and multiplayer "subsites"
+- [+] username
+- [+] saving username by cookies
+- [/] owr description
+- [/] switch style
+- [/] categories menu
+```
+
+</details>
+
