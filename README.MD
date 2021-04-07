@@ -2,7 +2,7 @@
 
 Handman is a game where one player is randomizing or setting the word and category which other players have to guess.
 
-Game is able to play **[here](https://panzenon.github.io/2d-game/)**.
+Game is available **[here](https://panzenon.github.io/2d-game/)**.
 
 **Note:** Cookies won't work when using `file//` protocol.
 
@@ -16,14 +16,19 @@ Game is able to play **[here](https://panzenon.github.io/2d-game/)**.
 # Manual
 
 ### Create lobby
-Player can create lobby open to everyone, or set the password up to 30 characters. On creating lobby, player can set new settings for game,
+
+Player can create lobby open to everyone, or set the password up to 30 characters.
+When player create lobby, admin have to set categories for whole game.
+After choosing categories, player can set new settings for game,
+
 - game fully randomized (players can't set their own password)
 - game depends on players (players can't randomize password)
 - mixed game (players can randomize and set their own password)
-- round time (from 1 minute up to 5 minutes).
-- 
+- round time (from 5 minutes up to 15 minutes).
+- time to respond (from 5 seconds up to 30 seconds / player).
 
 ### Find lobby
+
 Player can find open lobby, or join to existing one by code. Lobby with passwords is marked by padlock.
 
 # Screenshots
@@ -33,6 +38,7 @@ Player can find open lobby, or join to existing one by code. Lobby with password
 # Changelog
 
 ### InDev
+
 <details>
     <summary>v1.0</summary>
 
@@ -75,7 +81,7 @@ Player can find open lobby, or join to existing one by code. Lobby with password
 
 ```
 - [+] category menu,
-- [+] 
+- [+]
 - [/] light theme design
 ```
 
