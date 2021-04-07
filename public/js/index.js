@@ -6,7 +6,9 @@ window.onload = ()=>{
     registerCookies();
     loadingScreen();
     loadOptions();
-    toggleCategory(document.querySelector(''))
+    toggleCategory(".fa-book")
+    toggleCategory(".fa-times")
+    //choosedCategory()
 }
 
 
@@ -91,8 +93,8 @@ function changeTheme(){
 }
 
 function toggleCategory(path){
-    document.querySelector('.fa-times').addEventListener('click',()=>{
-        document.querySelector(path).classList.add('hidden')
+        document.querySelector(path).addEventListener('click',()=>{
+        document.querySelector('#whole-category').classList.toggle('hidden')
     })
 }
 

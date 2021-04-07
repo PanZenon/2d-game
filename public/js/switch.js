@@ -2,6 +2,8 @@ let switches = [];
 let music;
 let dark;
 let category;
+let selectCategory;
+
 function registerSwitch(){
     music = new Switch(document.querySelectorAll(".switch")[0], true)
     dark = new Switch(document.querySelectorAll(".switch")[1], true)
@@ -17,18 +19,12 @@ function registerSwitch(){
     document.querySelectorAll(".switch").forEach(e => {
         if(e.id == "category"){
             let s = new Switch(e, false);
-
             categoryList.push(s)
         }
     })
     category = new multiSwitch(categoryList);
     category.register();
-
-    categoryList.forEach(e => {
-
-    })
-
-
+    
     music.onDisable = function(){
         bgmusic.pause();
     }
@@ -61,6 +57,13 @@ class multiSwitch{
                 })
             }
         })
+    }
+    getValue(){
+        let trueValues = [];
+        this.items.forEach(e => {
+            if(e.value) trueValues.push(e);
+        })
+        return trueValues[0]
     }
     getItems(){
         return this.items;
