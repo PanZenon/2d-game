@@ -6,7 +6,9 @@
 }
 .switch {
 	border-bottom: 1px solid rgb(39, 158, 39);
-	transition: 0.2s all ease-in-out;
+	transition-property: border-bottom;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
 }
 .switch-disable {
 	border-bottom: 1px solid rgb(158, 47, 39);

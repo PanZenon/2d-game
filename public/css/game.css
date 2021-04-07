@@ -145,3 +145,11 @@
 	margin-right: auto;
 	width: fit-content;
 }
+.fa-check {
+	font-size: 1.3em;
+	transition: 0.3s all linear;
+	cursor: pointer;
+}
+.fa-check:hover {
+	color: green;
+}

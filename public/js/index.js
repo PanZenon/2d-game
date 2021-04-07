@@ -1,20 +1,25 @@
 let bgmusic = new Audio('sound/music.mp3');
-
 window.onload = ()=>{
     registerSwitch();
     registerSettings();
-    registerCookies();
     loadingScreen();
     loadOptions();
-    toggleCategory(".fa-book")
-    toggleCategory(".fa-times")
-    //choosedCategory()
+    choosedCategory()
+    document.querySelector('.fa-times').onclick = toggleCategory
+    document.querySelector('.fa-check').onclick = function(){
+        document.querySelector('.Singleplayer_newgame').classList.toggle('disabled')
+        toggleCategory()
+        game = new SingleGame(category.getValue());
+        game.randomWord();
+    }
 }
 
 
 
 
 function loadOptions(){
+    let nick = document.querySelector("#setUsername")
+
     if(getCookie("music")){
         setTimeout(function(){
             bgmusic.volume = 0.1;
@@ -23,6 +28,15 @@ function loadOptions(){
     }
     if(getCookie("changeTheme")){
         changeTheme()
+    }
+    if(getCookie("nick")){
+        nick.value = getCookie("nick")
+    }
+    nick.oninput = function(){
+        setCookie("nick", nick.value);
+    }
+    if(getCookie("accept")){
+        document.querySelector(".popup_cookies").classList.toggle("hidden")
     }
 }
 
@@ -35,11 +49,8 @@ function registerSettings(){
 
     document.querySelectorAll(".toggleSettings").forEach(addToggle)
     document.querySelectorAll(".toggleGame").forEach(addToggle)
-    document.querySelectorAll(".toggleCreateGame").forEach(addToggle)
-    document.querySelectorAll(".toggleJoinGame").forEach(addToggle)
     document.querySelectorAll(".toggleAbout").forEach(addToggle)
 }
-
 
 function toggleSettings(){
     document.querySelector(".options").classList.toggle('disabled')
@@ -56,7 +67,11 @@ function toggleCreateGame(){
     document.querySelector(".menu").classList.toggle('disabled')
     changeTitle("New game")
 }
+function toggleCategory(){
+     document.querySelector('#whole-category').classList.toggle('hidden')
+}
 function toggleAbout(){
+    console.log("1")
     document.querySelector(".about").classList.toggle('disabled')
     document.querySelector(".menu").classList.toggle('disabled')
     changeTitle("About")
@@ -92,12 +107,8 @@ function changeTheme(){
     }
 }
 
-function toggleCategory(path){
-        document.querySelector(path).addEventListener('click',()=>{
-        document.querySelector('#whole-category').classList.toggle('hidden')
-    })
-}
 
+/*
 class Page{
     constructor(item){
         this.item = item;
@@ -112,4 +123,22 @@ class Page{
         this.item.classList.toggle('disabled')
         document.querySelector(".menu").classList.toggle('disabled')
     }
+}
+*/
+function choosedCategory(){
+    const chosed = document.querySelectorAll('.game-mode-option')
+    chosed.forEach(e => {
+        if(e.id == 'single'){
+            e.addEventListener('click', ()=>{
+                document.querySelector('.game-mode').classList.toggle('hidden')
+                document.querySelector('.category').classList.toggle('hidden')
+            })
+        }
+        else{
+            e.addEventListener('click', ()=>{
+                //CREATE NEW
+                //JOIN
+            })
+        }
+    });
 }

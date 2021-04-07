@@ -1,0 +1,33 @@
+.cookies-menu {
+	width: 100vw;
+	min-height: 5px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	background-color: rgba(25, 25, 25, 0.75);
+	color: rgb(255, 255, 255);
+
+	padding: 15px 0px;
+	user-select: none;
+
+	text-align: Center;
+}
+.cookies-text {
+	font-size: 24px;
+	line-height: 25px;
+}
+
+.cookies-accept {
+	border: 1px solid white;
+	padding: 15px 12.5px;
+	font-weight: thin;
+	transition-duration: 0.5s;
+	border-radius: 5px;
+}
+.cookies-accept:hover {
+	cursor: pointer;
+	background-color: rgba(75, 75, 75, 1);
+	color: rgb(0, 119, 255);
+	font-weight: bolder;
+}

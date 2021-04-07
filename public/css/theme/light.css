@@ -1,14 +1,14 @@
 body.light-mode {
-  background-color: #ebebeb;
+	background-color: #ebebeb;
 }
-body.light-mode *{
-  color: black;
+body.light-mode * {
+	color: black;
 }
 
 /* HANGMAN HEADER */
 body.light-mode header {
-  text-shadow: 0 0 5px rgb(125, 0, 0), 0 0 15px rgb(125, 0, 0),
-  0 0 20px rgb(125, 0, 0), 0 0 40px rgb(125, 0, 0);
+	text-shadow: 0 0 5px rgb(125, 0, 0), 0 0 15px rgb(125, 0, 0),
+		0 0 20px rgb(125, 0, 0), 0 0 40px rgb(125, 0, 0);
 	animation: 2s linear 0s infinite alternate shiningLight;
 }
 
@@ -24,11 +24,15 @@ body.light-mode header {
 
 /*ABOUT*/
 
-body.light-mode .author-avatar{
-  border-color: black;
+body.light-mode .author-avatar {
+	border-color: black;
 }
-body.light-mode .authors-col{
-  background-color: rgba(49, 49, 49, 0.4);
-  border-color: rgb(99, 99, 99);
+body.light-mode .authors-col {
+	background-color: rgba(49, 49, 49, 0.4);
+	border-color: rgb(99, 99, 99);
 }
 
+body.light-mode .author-github {
+	color: #007bff;
+	text-decoration: none;
+}

@@ -18,9 +18,22 @@
     <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/cookies.css">
 </head>
 <body>
     
+        <!-- accept cookies -->
+        <div class="popup_cookies">
+            <div class="cookies-menu">
+                <span class='cookies-text'>
+                    This site use cookies to store player data.
+                </span>
+                <span class='cookies-accept' onclick="acceptCookies()">
+                    OK
+                </span>
+            </div>
+        </div> 
+
     <container class='loading-screen'>
        <div class='dot'></div>
        <div class='dot'></div>
@@ -38,15 +51,7 @@
         <div class="main-option option toggleSettings"><i class="fas fa-cog"></i> Settings</div>
         <div class="main-option option toggleAbout"><i class="fas fa-user"></i> About</div>
     </container>
-
-    <container class='newgame box disabled'>
-        <center>
-            <h1 class='about-header'>Lobby</h1>
-        </center>
-        <div class="main-option option toggleCreateGame"><i class="fas fa-plus"></i> New</div>
-        <div class="main-option option toggleJoinGame"><i class="fas fa-sign-in-alt"></i> Join</div>
-    </container>
-
+    <!-- SETTINGS -->
     <container class="options box disabled">
         <h3><i class="fas fa-cog"></i> Settings</h3>
         <div class="settings">
@@ -55,7 +60,10 @@
         </div>
         <div class="option toggleSettings">Back</div>
     </container>
+
+    <!-- GAME -->
     <container class="game box disabled">
+        <!-- CATEGORY -->
         <container class="category hidden" id='whole-category'> 
             <h1>Category <i class="fas fa-times"></i></h1> 
             <img src="img/choose-image.png" alt=""> 
@@ -65,11 +73,10 @@
             <div class="switch" id="category"><i class="fas fa-user-friends"></i> Characters</div>
             <div class="switch" id="category"><i class="fas fa-video"></i> Films</div>
             <div class="switch" id="category"><i class="fas fa-seedling"></i> Plants</div>
+            <i class="fas fa-check"></i>
         </container>
         
-        <!--<i class="fas fa-book"></i>
-        <h3><i class="fas fa-play"></i> Game over</h3>
-        <div class="option toggleGame">Back</div>-->
+        <!-- GAME MODE -->
         <container class="game-mode">
             <h1>Choose your game mod</h1>
             <div class="options">
@@ -77,8 +84,28 @@
             <div class="game-mode-option option" id='multi'><i class="fas fa-users"></i> Mulitiplayer</div>
             <div style="clear:both;"></div>
             </div>
-        
+        </container>
+
+        <!-- MULTIPLAYER -->
+        <container class='Multiplayer_newgame box disabled'>
+            <center>
+                <h1 class='about-header'>Multiplayer</h1>
+            </center>
+            <div class="main-option option toggleCreateGame"><i class="fas fa-plus"></i> New</div>
+            <div class="main-option option toggleJoinGame"><i class="fas fa-sign-in-alt"></i> Join</div>
+        </container>
+
+        <!-- SINGLEPLAYER -->
+        <container class='Singleplayer_newgame box disabled'>
+            <center>
+                <h1 class='about-header'>Singleplayer</h1>
+            </center>
+            <div class="main-option option toggleCreateGame"><i class="fas fa-plus"></i> New</div>
+        </container>
+
     </container>
+
+    <!-- ABOUT -->
     <container class='about box disabled'>
     
         <div class='authors-holder'>
@@ -103,7 +130,7 @@
                     <br/>
                     <br/>
                         <span class='author-description'>
-                            siema
+                            <a href = "https://github.com/owerrr" class='a_link' target="_blank">GitHub</a>
                         </span>
                 </div>
                 <div class="authors-col">
@@ -123,16 +150,11 @@
     </container>
 
 
-    
+    <script src="js/game.js"></script>
     <script src="js/switch.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/293893692c.js" crossorigin="anonymous"></script>
 
-
-
-
-    <!-- accept cookies -->
-                                                                                                                                  
 </body>
 </html>

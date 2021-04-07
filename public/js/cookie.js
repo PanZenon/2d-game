@@ -1,5 +1,7 @@
-function registerCookies(){
- 
+function acceptCookies(){
+    console.log("chuj")
+    setCookie("accept", true)
+    document.querySelector(".popup_cookies").classList.toggle("hidden")
 }
 
 
@@ -22,5 +24,4 @@ function getCookie(cname)
             return ret;
         }
     }
-    return true;
 }

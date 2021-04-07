@@ -125,10 +125,6 @@ header:hover {
 	margin-top: 20px;
 	margin-bottom: 50px;
 }
-.settings .switch {
-	margin-bottom: 20px;
-	transition: 0.2s all ease-in-out;
-}
 
 .label-nick {
 	font-size: 24px;
@@ -156,4 +152,9 @@ header:hover {
 	left: 0;
 	bottom: 0;
 	cursor: pointer;
+}
+
+a[class="a_link"] {
+	color: #007bff;
+	text-decoration: none;
 }
