@@ -1,4 +1,4 @@
-# Handman | InDev 1.3
+# Handman | InDev 1.5
 
 Handman is a game where one player is randomizing or setting the word and category which other players have to guess.
 
@@ -36,11 +36,21 @@ When player create lobby, he have to set categories for whole game.
 
 After choosing categories, player can set new settings for game:
 
+- time to set password (otherwise it'll randomize it) from 10 to 60s,
+- time to guess letter (from 5 seconds up to 30 seconds / player),
+- round time (from 5 minutes up to 20 minutes),
+- maximum words length,
+- type of game,
+- words language,
+- rounds (from 1 round up to 10 rounds),
+    * Multiplayer - from 1 round up to 10 rounds,
+    * Singleplayer - from 1 round up to 20 rounds,
+        * one round ends when all players set or randomize their password.
+
+#### Type of game
 - game fully randomized (players can't set their own password)
 - game depends on players (players can't randomize password)
 - mixed game (players can randomize and set their own password)
-- round time (from 5 minutes up to 15 minutes).
-- time to respond (from 5 seconds up to 30 seconds / player).
 
 Player can find open lobby, or join to existing one by code. Lobby with passwords is marked by padlock.
 
@@ -116,14 +126,25 @@ In About page are authors who made something in our **Handman**
 - [+] simple menu after play-button
 - [+] back to main menu on header click
 - [+] more categories to choose
-- [+] Singleplayer and multiplayer "subsites"
+- [+] Singleplayer and multiplayer to choose
 - [+] username
 - [+] saving username by cookies
+- [+] singleplayer subsite
+- [+] expandable settings with cool animation at singleplayer subsite
+- [+] first easteregg
 - [/] owr description
 - [/] switch style
 - [/] categories menu
 ```
 
 </details>
+
+<details>
+    <summary>v1.5</summary>
+
+```
+- [+] settings content
+- [/] improved expandable settings animation at singleplayer subsite.
+```
 
 </details>

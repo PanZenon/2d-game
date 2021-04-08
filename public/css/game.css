@@ -78,6 +78,7 @@
 	border-radius: 20px;
 	background-color: #303030;
 	transition: 0.3s all ease;
+	z-index:2;
 }
 
 .category h1 {
@@ -153,14 +154,16 @@
 .fa-check:hover {
 	color: green;
 }
+
+/* singleplaer settings */
+
 .Singleplayer_newgame {
 	margin-top: 50px;
 }
 
 .game-fullbox {
 	width: 450px;
-	height: 50vh;
-	max-height: 600px;
+	height: 600px;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -186,3 +189,50 @@
 
 	background-color: #1a1a1a;
 }
+
+.settings-box{
+	width:400px;
+	height:500px;
+	margin:auto;
+	/*background-color:red;*/
+	text-align:left;
+	color:rgb(255,255,255);
+}
+
+.settings-title{
+	font-size:24px;
+	font-weight:bold;
+	color:rgb(255,255,255);
+}
+
+.settings-subtitle{
+	font-size:16px;
+	font-weight:normal;
+	color:rgb(150,150,150);
+}
+
+.settings-difficulty{
+	width:400px;
+	min-height:5px;
+	/*background-color:red;*/
+	margin:auto;
+}
+
+.btn-difficulty{
+	width:98px;
+	padding:5px 8.3px;
+	text-align:center;
+	margin-left:25px;
+	float:left;
+	transition-property:background-color;
+	transition-duration:0.5s;
+}	.btn-difficulty:first-child{margin-left:0;}
+	.btn-difficulty:hover{cursor:pointer;}
+
+.Easy{border: 1px solid rgba(0,255,0,0.75);}
+.Normal{border: 1px solid rgba(255,150,0,0.75);}
+.Hard{border: 1px solid rgba(255,0,0,0.75);}
+
+.Easy:hover{background-color: rgba(0,255,0,0.75);}
+.Normal:hover{background-color:rgba(255,150,0,0.75);}
+.Hard:hover{background-color:rgba(255,0,0,0.75);}
