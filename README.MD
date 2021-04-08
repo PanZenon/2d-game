@@ -1,4 +1,4 @@
-# Handman | InDev 1.3
+# Handman | InDev 1.4
 
 Handman is a game where one player is randomizing or setting the word and category which other players have to guess.
 
@@ -119,6 +119,7 @@ In About page are authors who made something in our **Handman**
 - [+] Singleplayer and multiplayer "subsites"
 - [+] username
 - [+] saving username by cookies
+- [+] easteregg
 - [/] owr description
 - [/] switch style
 - [/] categories menu
