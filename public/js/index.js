@@ -1,4 +1,6 @@
-let bgmusic = new Audio('sound/music.mp3');
+let number = 0;
+let randomMusic;
+let bgmusic = new Audio('sound/music2.mp3');
 window.onload = ()=>{
     registerSwitch();
     registerSettings();
@@ -12,15 +14,59 @@ window.onload = ()=>{
         game = new SingleGame(category.getValue());
         game.randomWord();
     }
+
+
+    
+    //document.querySelector('.toggleGameSettings').addEventListener("click", toggleGameSettings);;
+    
 }
 
+var settings_btn = document.querySelector('.toggleGameSettings');
+var box_whole = document.querySelector('.game-fullbox');
+var box_left = document.querySelector('.game-left');
+var box_right = document.querySelector('.game-right');
 
+
+function toggleGameSettings(turnTo){
+    if( turnTo == "on" ){
+        box_whole.style.width = "901px";
+        box_left.style.transitionDuration = "5s";
+    
+        box_right.style.left = "450px";
+        
+        box_left.style.borderRight = "1px solid white";
+        box_left.style.width = "450px";
+        box_left.style.transform = "translate(50%,50%);";
+        
+        setTimeout(function(){
+
+            document.querySelector('.toggleGameSettings').setAttribute('onclick', 'toggleGameSettings("off")');
+        },1000);
+    }else if (turnTo == "off"){
+        box_whole.style.width = "450px";
+        box_left.style.transitionDuration = "2s";
+        box_right.style.left= "0px";
+        box_left.style.borderRight = "1px solid transparent";
+        box_left.style.width = "450px";
+        box_left.style.transform = "translate(50%,50%);";
+        
+        setTimeout(function(){
+
+            box_right.style.left = "0px";
+            document.querySelector('.toggleGameSettings').setAttribute('onclick', 'toggleGameSettings("on")');
+        },1000);
+    }
+
+}
 
 
 function loadOptions(){
     let nick = document.querySelector("#setUsername")
 
     if(getCookie("music")){
+        number = Math.floor(Math.random() * (100-1)) + 1;
+        console.log(number);
+
         setTimeout(function(){
             bgmusic.volume = 0.1;
             bgmusic.play();
@@ -137,7 +183,7 @@ function choosedCategory(){
         else{
             e.addEventListener('click', ()=>{
                 //CREATE NEW
-                //JOIN
+                //JOIN\
             })
         }
     });

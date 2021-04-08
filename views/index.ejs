@@ -40,7 +40,7 @@
        <div class='dot'></div>
        <div style="clear:both;"></div>
     </container>
-    <img class='hangman' src="img/wisielec-dark.gif" alt="">
+    <img class='hangman' src="img/wisielec-dark.gif" alt="" >
     <header id="hangman" onclick="window.location.href = '/'">Hangman</header>
     <container class="menu box" style='text-align:Center;'>
         <label for='setUsername' class='label-nick'>Your username:</label>
@@ -58,7 +58,7 @@
             <div class="switch" id="music" style="margin-top: 50px;"><span><i class="fas fa-music"></i> Music</span></div>
             <div class="switch" id="changeTheme"><span class='changeTheme'><i class="fas fa-adjust"></i> Light theme</span></div>
         </div>
-        <div class="option toggleSettings">Back</div>
+        <div class="option toggleSettings"><i class="fas fa-undo"></i> Back</div>
     </container>
 
     <!-- GAME -->
@@ -97,12 +97,30 @@
 
         <!-- SINGLEPLAYER -->
         <container class='Singleplayer_newgame box disabled'>
-            <center>
-                <h1 class='about-header'>Singleplayer</h1>
-            </center>
-            <div class="main-option option toggleCreateGame"><i class="fas fa-plus"></i> New</div>
+            <div class='game-fullbox'>
+                <div class='game-left'>
+                    <center>
+                        <h1 class='about-header'>Singleplayer</h1>
+                    </center>
+                    <div class="main-option option toggleCreateGame"><i class="fas fa-play-circle"></i> Start</div>
+                    <div class="main-option option toggleGameSettings" onclick='toggleGameSettings("on")'><i class="fas fa-cog"></i> Settings</div>
+                    <div class="main-option option toggleCreateGame"><i class="fas fa-undo"></i> Back</div>
+                </div>
+
+                <div class='game-right'>
+                    <h1 class='about-header'>Settings</h1>
+                </div>
+
+            </div>
         </container>
 
+        <!-- NEW ROOM -->
+        <container class="newroom disabled">
+            <h1>Add new</h1>
+            <h2>Room name</h2>
+            <h2>Password</h2>
+            <div class="main-option option toggleCreateGame"><i class="fas fa-undo"></i> Back</div>
+        </container>
     </container>
 
     <!-- ABOUT -->
@@ -145,7 +163,7 @@
                 </div>
             </div>
             <br/>
-            <div class="option toggleAbout">Back</div>
+            <div class="option toggleAbout"><i class="fas fa-undo"></i> Back</div>
         </div>
     </container>
 
@@ -154,6 +172,8 @@
     <script src="js/switch.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/index.js"></script>
+    
+    
     <script src="https://kit.fontawesome.com/293893692c.js" crossorigin="anonymous"></script>
 
 </body>

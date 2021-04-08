@@ -65,7 +65,7 @@ header:hover {
 	margin: 0 auto;
 	display: block;
 	transition: 0.2s all ease-in-out;
-	margin-top: 150px !important;
+	margin-top: 150px;
 }
 .menu {
 	width: 500px;

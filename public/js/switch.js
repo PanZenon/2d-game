@@ -32,7 +32,7 @@ function registerSwitch(){
 
         let randomNum = Math.floor(Math.random() * (100-1))+1;
         console.log(randomNum);
-        if(randomNum >0 && randomNum <10) bgmusic = new Audio('sound/music_veryrare.mp3');
+        if(randomNum >0 && randomNum <10) bgmusic = new Audio('sound/music2.mp3');
         else bgmusic = new Audio('sound/music.mp3');
 
         bgmusic.volume = 0.1;
