@@ -54,14 +54,7 @@ class multiSwitch{
                 e.onClick();
                 e.toggle();
             }
-            let x = this.items
-            e.onClick = function(){
-                x.forEach(s => {
-                    if(e != s){
-                        s.disable();
-                    }
-                })
-            }
+            
         })
     }
     getValue(){
@@ -69,7 +62,7 @@ class multiSwitch{
         this.items.forEach(e => {
             if(e.value) trueValues.push(e);
         })
-        return trueValues[0]
+        return trueValues
     }
     getItems(){
         return this.items;

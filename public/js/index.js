@@ -8,6 +8,7 @@ window.onload = ()=>{
     loadOptions();
     choosedCategory()
     document.querySelector('.fa-times').onclick = toggleCategory
+
     document.querySelector('.fa-check').onclick = function(){
         document.querySelector('.Singleplayer_newgame').classList.toggle('disabled')
         toggleCategory()
@@ -18,7 +19,6 @@ window.onload = ()=>{
 
     
     //document.querySelector('.toggleGameSettings').addEventListener("click", toggleGameSettings);;
-    
 }
 
 var settings_btn = document.querySelector('.toggleGameSettings');
