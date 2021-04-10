@@ -144,6 +144,9 @@ In About page are authors who made something in our **Handman**
 
 ```
 - [+] settings content
+- [+] multiselect on categories
+- [/] style of input in lobby settings
+- [/] light theme
 - [/] improved expandable settings animation at singleplayer subsite.
 ```
 
