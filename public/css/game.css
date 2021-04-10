@@ -175,7 +175,7 @@
 	opacity: 1;
 	z-index: -1;
 	left: 0px;
-	position: flex;
+	position: absolute;
 	transition-duration: 2s;
 }
 .game-left {
