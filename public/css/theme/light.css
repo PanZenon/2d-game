@@ -36,3 +36,40 @@ body.light-mode .author-github {
 	color: #007bff;
 	text-decoration: none;
 }
+
+/* nick */
+body.light-mode .input-nick{
+	border-color: rgb(0,0,0);
+}
+
+/* play */
+
+body.light-mode h1{
+	color:black;
+}
+
+
+/* category */
+
+body.light-mode .category{
+	background-color: rgba(255,255,255,0.75);
+}
+
+/* singleplayer menu */
+
+body.light-mode .game-left{
+	background-color:#ebebeb;
+}
+
+body.light-mode .settings-subtitle input{
+	width:150px;
+	background-color:transparent;
+	border:none;
+	outline:none;
+	border-bottom: 1px solid rgba(0,0,0,.75);
+	color:rgb(0,0,0);
+}
+
+body.light-mode .settings-subtitle > .locked{
+	border-bottom: 1px solid rgba(255,255,255,.75);
+}
